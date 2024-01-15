@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Disparo : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Disparo : MonoBehaviour
     public GameObject prefab;
 
     public Transform insPoint;
+
+    public TextMeshProUGUI municionText;
 
     private int municion = 0;
 
@@ -32,7 +35,7 @@ public class Disparo : MonoBehaviour
              
  
             municion--;
-
+            municionText.text = "x" + municion;
         }
 
 
@@ -43,9 +46,8 @@ public class Disparo : MonoBehaviour
     {
         if (collision.CompareTag("Basura"))
         {
-            print(municion);
             municion++;
-            print(municion);
+            municionText.text = "x" + municion;
         }
 
     }
