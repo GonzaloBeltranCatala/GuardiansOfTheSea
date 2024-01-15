@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoEnemigo : MonoBehaviour
+public class MovimientoEnemigo2 : MonoBehaviour
 {
-    public Transform objetivo;
-    public float velocidad = 0.5f;
+    public float velocidad = 5f;
+    public float distanciaLimite = 5f;
     public float distanciaMinima = 1f;
 
     private Vector3 direccion = Vector3.left;
@@ -18,11 +18,11 @@ public class MovimientoEnemigo : MonoBehaviour
 
     void Update()
     {
-        Vector3 direccion = objetivo.position - transform.position;
-        direccion.Normalize();
-
         transform.position += direccion * velocidad * Time.deltaTime;
-
+        if (Mathf.Abs(transform.position.x) >= distanciaLimite)
+        {
+            CambiarDireccion();
+        }
         spriteRenderer.flipX = (direccion.x > 0);
     }
 
@@ -32,7 +32,7 @@ public class MovimientoEnemigo : MonoBehaviour
         {
             StunSubmarino();
         }
-        else if (other.CompareTag("Bala"))
+        else if (other.CompareTag("Proyectil"))
         {
             DestruirSubmarino();
         }
@@ -46,13 +46,11 @@ public class MovimientoEnemigo : MonoBehaviour
 
     void DestruirSubmarino()
     {
-        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemigo");
-
-        foreach (GameObject enemigo in enemigos)
-        {
-            Destroy(enemigo);
-        }
-
         Destroy(gameObject);
+    }
+
+    void CambiarDireccion()
+    {
+        direccion = new Vector3(Random.Range(-1f, 1f), 0f, 0f).normalized;
     }
 }

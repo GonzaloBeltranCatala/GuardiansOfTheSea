@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Submarino
   - Basura
+  - Enemigo
+  - Enemigo2
+  - Bala
   layers:
   - Default
   - TransparentFX
