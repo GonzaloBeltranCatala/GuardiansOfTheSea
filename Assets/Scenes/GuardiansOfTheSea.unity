@@ -135,9 +135,29 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7585659189771558709, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
+      propertyPath: m_Size.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: -7585659189771558709, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: -7585659189771558709, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7395512957990623540, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395512957990623540, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395512957990623540, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7395512957990623540, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -219,6 +239,14 @@ PrefabInstance:
     - target: {fileID: 8926735370004474766, guid: 656f3689e67bee64792b7c86a30d1844, type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926735370004474766, guid: 656f3689e67bee64792b7c86a30d1844, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926735370004474766, guid: 656f3689e67bee64792b7c86a30d1844, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8926735370004474766, guid: 656f3689e67bee64792b7c86a30d1844, type: 3}
       propertyPath: m_LocalPosition.x
