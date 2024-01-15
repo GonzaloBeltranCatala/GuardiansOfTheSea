@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GuardiansOfTheSea.unity
+    guid: f16099de65e5dab4bad12f7a05612560
+  - enabled: 1
+    path: Assets/Scenes/Opciones.unity
+    guid: 060d9afa6b2ef2c42b7aae45b5b0248d
   m_configObjects: {}
