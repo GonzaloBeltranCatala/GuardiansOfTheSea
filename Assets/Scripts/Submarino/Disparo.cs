@@ -16,17 +16,16 @@ public class Disparo : MonoBehaviour
 
 
   
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-
-        if (Input.GetButtonDown("Fire") && municion > 0)
+            //jump en el input manager es el space
+        if (Input.GetButtonDown("Jump") && municion > 0)
         {
            
                 //que voy a instanciar,donde, no rota
