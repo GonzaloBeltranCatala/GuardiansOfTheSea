@@ -58,5 +58,7 @@ public class Cronometro : MonoBehaviour
 
         cronometroTxt.text = string.Format("{0:00} : {1:00}", minutos,segundos);
 
+        print("asdf");
+
     }
 }
