@@ -26,25 +26,15 @@ public class MovimientoEnemigo2 : MonoBehaviour
         spriteRenderer.flipX = (direccion.x > 0);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Submarino"))
+        if (collision.CompareTag("Submarino") || (collision.CompareTag("Bala")))
         {
-            StunSubmarino();
-        }
-        else if (other.CompareTag("Proyectil"))
-        {
-            DestruirSubmarino();
+            DestruirEnemigo();
         }
     }
 
-    void StunSubmarino()
-    {
-        // falta el stun
-        Destroy(gameObject);
-    }
-
-    void DestruirSubmarino()
+    void DestruirEnemigo()
     {
         Destroy(gameObject);
     }

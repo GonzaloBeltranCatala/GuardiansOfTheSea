@@ -31,8 +31,6 @@ public class Disparo : MonoBehaviour
                 //que voy a instanciar,donde, no rota
                 Instantiate(prefab, insPoint.position, Quaternion.identity);
 
-             
- 
             municion--;
             municionText.text = "x" + municion;
         }

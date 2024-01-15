@@ -5,19 +5,22 @@ using UnityEngine;
 public class AparicionEnemigo : MonoBehaviour
 {
     public GameObject enemigo;
-
-    private Vector3 posicion;
-
-    private int numEnemigo = 1;
+    private int numEnemigo = 4;
 
     private void Awake()
     {
-        for (int i = 0; i < numEnemigo; i++)
-        {
-            // X(izquierda derecha) Y(arriba abajo) 
-            posicion = new Vector3(Random.Range(-10, 10), Random.Range(-6, -40), 0);
+        AparecerEnemigos();
+    }
 
-            Instantiate(enemigo, posicion, Quaternion.identity);
+    public void AparecerEnemigos()
+    {
+        if (enemigo != null && !Object.ReferenceEquals(enemigo, null))
+        {
+            for (int i = 0; i < numEnemigo; i++)
+            {
+                Vector3 posicion = new Vector3(Random.Range(-5, 5), Random.Range(-10, -30), 0);
+                Instantiate(enemigo, posicion, Quaternion.identity);
+            }
         }
     }
 }

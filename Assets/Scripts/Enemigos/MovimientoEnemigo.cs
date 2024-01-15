@@ -20,39 +20,26 @@ public class MovimientoEnemigo : MonoBehaviour
     {
         Vector3 direccion = objetivo.position - transform.position;
         direccion.Normalize();
-
         transform.position += direccion * velocidad * Time.deltaTime;
 
         spriteRenderer.flipX = (direccion.x > 0);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Submarino"))
+        if (collision.CompareTag("Submarino") || (collision.CompareTag("Bala")))
         {
-            StunSubmarino();
-        }
-        else if (other.CompareTag("Bala"))
-        {
-            DestruirSubmarino();
+            DestruirEnemigo();
         }
     }
 
-    void StunSubmarino()
+    void DestruirEnemigo()
     {
-        // falta el stun
-        Destroy(gameObject);
-    }
-
-    void DestruirSubmarino()
-    {
-        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemigo");
-
-        foreach (GameObject enemigo in enemigos)
+        AparicionEnemigo aparicionEnemigo = FindObjectOfType<AparicionEnemigo>();
+        if (aparicionEnemigo != null)
         {
-            Destroy(enemigo);
+            aparicionEnemigo.AparecerEnemigos();
         }
-
         Destroy(gameObject);
     }
 }

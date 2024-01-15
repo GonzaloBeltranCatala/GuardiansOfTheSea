@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class MovimientoSubmarino : MonoBehaviour
 {
-
-
     public float velocidad;
 
     private SpriteRenderer spriteRenderer;
 
     public float profundidadMax;
 
+    private Animator animator;
+
 
     private void Awake()
     {
-       
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
 
@@ -47,5 +47,13 @@ public class MovimientoSubmarino : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemigo") || (collision.CompareTag("Enemigo2")))
+        {
+            animator.Play("Herido");
+        }
     }
 }

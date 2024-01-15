@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8985387053865945239, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7395512957990623540, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -196,9 +200,21 @@ PrefabInstance:
       propertyPath: objetivo
       value: 
       objectReference: {fileID: 728430850}
+    - target: {fileID: -7342362344223440148, guid: 656f3689e67bee64792b7c86a30d1844, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7342362344223440148, guid: 656f3689e67bee64792b7c86a30d1844, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7927981264195657496, guid: 656f3689e67bee64792b7c86a30d1844, type: 3}
       propertyPath: m_Name
       value: Enemigo1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927981264195657496, guid: 656f3689e67bee64792b7c86a30d1844, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8926735370004474766, guid: 656f3689e67bee64792b7c86a30d1844, type: 3}
       propertyPath: m_RootOrder
@@ -347,6 +363,7 @@ GameObject:
   - component: {fileID: 728430851}
   - component: {fileID: 728430852}
   - component: {fileID: 728430854}
+  - component: {fileID: 728430855}
   m_Layer: 0
   m_Name: Submarino
   m_TagString: Submarino
@@ -523,6 +540,27 @@ MonoBehaviour:
   prefab: {fileID: 4440559383444633052, guid: 6ee84d21cdab0bc4eac09bd581ba74e2, type: 3}
   insPoint: {fileID: 1979980529}
   municionText: {fileID: 1241046156}
+--- !u!95 &728430855
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728430847}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10af131a8503a664c89384967025d727, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &749851979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9057645659849714649, guid: 43e95b47804d5d647a4fce486767332b, type: 3}
