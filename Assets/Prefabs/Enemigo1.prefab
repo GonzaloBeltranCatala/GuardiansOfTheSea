@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -7342362344223440148}
   - component: {fileID: -9073563274887065663}
   - component: {fileID: -8489558783094051839}
+  - component: {fileID: -5859787599864849981}
   m_Layer: 0
   m_Name: Enemigo1
   m_TagString: Enemigo
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetivo: {fileID: 0}
-  velocidad: 0.5
+  velocidad: 2
   distanciaMinima: 1
 --- !u!61 &-8489558783094051839
 BoxCollider2D:
@@ -146,3 +147,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!50 &-5859787599864849981
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927981264195657496}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

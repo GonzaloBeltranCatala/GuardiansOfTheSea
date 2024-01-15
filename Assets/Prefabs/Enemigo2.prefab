@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -8985387053865945239}
   - component: {fileID: -5924522103657479370}
   - component: {fileID: -7585659189771558709}
+  - component: {fileID: 8222265528561685173}
   m_Layer: 0
   m_Name: Enemigo2
   m_TagString: Enemigo2
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  distanciaLimite: 5
+  distanciaLimite: 9
   distanciaMinima: 1
 --- !u!61 &-7585659189771558709
 BoxCollider2D:
@@ -146,3 +147,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!50 &8222265528561685173
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057645659849714649}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
