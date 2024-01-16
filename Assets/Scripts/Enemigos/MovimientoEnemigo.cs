@@ -35,7 +35,7 @@ public class MovimientoEnemigo : MonoBehaviour
 
     void DestruirEnemigo()
     {
-        AparicionEnemigo aparicionEnemigo = FindObjectOfType<AparicionEnemigo>();
+        AparicionTiburon aparicionEnemigo = FindObjectOfType<AparicionTiburon>();
         if (aparicionEnemigo != null)
         {
             aparicionEnemigo.AparecerEnemigos();

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AparicionEnemigo : MonoBehaviour
+public class AparicionTiburon : MonoBehaviour
 {
     public GameObject enemigo;
-    private int numEnemigo = 4;
+    private int numEnemigo = 1;
 
     private void Awake()
     {

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8489558783094051839}
   - component: {fileID: -5859787599864849981}
   m_Layer: 0
-  m_Name: Enemigo1
+  m_Name: Tiburon
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
