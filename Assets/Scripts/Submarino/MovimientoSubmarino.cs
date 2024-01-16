@@ -8,8 +8,6 @@ public class MovimientoSubmarino : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    public float profundidadMax;
-
     private Animator animator;
 
 
@@ -34,7 +32,7 @@ public class MovimientoSubmarino : MonoBehaviour
 
         Vector3 movementVector = inputVector * velocidad * Time.deltaTime;
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x + movementVector.x, -8, 8), Mathf.Clamp(transform.position.y + movementVector.y, profundidadMax, - 2.5f), 0);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x + movementVector.x, -8, 8), Mathf.Clamp(transform.position.y + movementVector.y, -60, 0), 0);
 
 
         if (Input.GetAxisRaw("Horizontal") > 0)
@@ -51,7 +49,7 @@ public class MovimientoSubmarino : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemigo") || (collision.CompareTag("Enemigo2")))
+        if (collision.CompareTag("Tiburon") || (collision.CompareTag("Medusa")))
         {
             animator.Play("Herido");
         }
