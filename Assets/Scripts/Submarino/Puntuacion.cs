@@ -8,7 +8,7 @@ public class Puntuacion : MonoBehaviour
 
 public Disparo scriptDisparo;
 
-public Cronometro scriptCrono;
+//public Cronometro scriptCrono;
 
 public int puntos;
 
@@ -18,7 +18,7 @@ void Start()
 {
 scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
 
-scriptCrono = GameObject.Find("Submarino").GetComponent<Cronometro>();
+//scriptCrono = GameObject.Find("Submarino").GetComponent<Cronometro>();
 
 }
 
@@ -29,9 +29,11 @@ scriptCrono = GameObject.Find("Submarino").GetComponent<Cronometro>();
         
             puntos = scriptDisparo.municion;   
 
-            puntos = puntos * 5;
+            puntos = puntos + 5;
 
-            scriptCrono.timeLeft = scriptCrono.timeLeft + puntos;
+            scriptDisparo.municion = 0;
+
+            //scriptCrono.timeLeft = scriptCrono.timeLeft + puntos;
 
         }
 
