@@ -5,20 +5,12 @@ using UnityEngine;
 public class MovimientoTiburon : MonoBehaviour
 {
     public Transform objetivo;
-    public float velocidad = 0.5f;
-    public float distanciaMinima = 1f;
-    public float velocidadDesvanecimiento = 0.2f;
-    public float opacidadInicial = 1f;
-
+    public float velocidad = 0.5f, distanciaMinima = 1f, velocidadDesvanecimiento = 0.2f, opacidadInicial = 1f;
     private Vector3 direccion = Vector3.left;
     private SpriteRenderer spriteRenderer;
-
     private Animator animator;
-    public Sprite spriteDefault;
-    public Sprite spriteAlternativo;
-
+    public Sprite spriteDefault, spriteAlternativo;
     private bool estaDesvaneciendose = false;
-
     private Collider2D tiburonCollider;
 
     void Start()
@@ -33,11 +25,11 @@ public class MovimientoTiburon : MonoBehaviour
     {
         if (!estaDesvaneciendose)
         {
-            Vector3 direccion = objetivo.position - transform.position;
-            direccion.Normalize();
-            transform.position += direccion * velocidad * Time.deltaTime;
+            Vector3 dir = objetivo.position - transform.position;
+            dir.Normalize();
+            transform.position += dir * velocidad * Time.deltaTime;
 
-            spriteRenderer.flipX = (direccion.x > 0);
+            spriteRenderer.flipX = (dir.x > 0);
         }
         else
         {
@@ -45,35 +37,26 @@ public class MovimientoTiburon : MonoBehaviour
             color.a -= velocidadDesvanecimiento * Time.deltaTime;
             spriteRenderer.color = color;
 
-            if (color.a <= 0)
-            {
-                Destroy(gameObject);
-            }
+            if (color.a <= 0) Destroy(gameObject);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    // Colisiones con el tiburon
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.CompareTag("Submarino"))
-        {
-            DestruirTiburon();
-        }
-        else if (collision.CompareTag("Bala"))
-        {
-            ApaciguarTiburon();
-        }
+        if (col.CompareTag("Submarino")) DestruirTiburon();
+        else if (col.CompareTag("Bala")) ApaciguarTiburon();
     }
 
+    // Funcion para cuando el tiburon se choca con el submarino
     void DestruirTiburon()
     {
         AparicionTiburon aparicionEnemigo = FindObjectOfType<AparicionTiburon>();
-        if (aparicionEnemigo != null)
-        {
-            aparicionEnemigo.AparecerEnemigos();
-        }
+        if (aparicionEnemigo != null) aparicionEnemigo.AparecerEnemigos();
         Destroy(gameObject);
     }
 
+    // Funcion para cuando golpeas al tiburon con una bala
     void ApaciguarTiburon()
     {
         CambiarSprite(spriteAlternativo);
@@ -82,9 +65,10 @@ public class MovimientoTiburon : MonoBehaviour
         tiburonCollider.enabled = false;
     }
 
+    // Cambia el sprite al tiburon feliz
     void CambiarSprite(Sprite nuevoSprite)
     {
-        GetComponent<SpriteRenderer>().sprite = nuevoSprite;
+        spriteRenderer.sprite = nuevoSprite;
         spriteRenderer.color = new Color(1f, 1f, 1f, opacidadInicial);
         animator.Play("Triste", 0, 0f);
     }

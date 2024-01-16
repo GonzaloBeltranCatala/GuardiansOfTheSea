@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5924522103657479370}
   - component: {fileID: -7585659189771558709}
   - component: {fileID: 8222265528561685173}
+  - component: {fileID: 1628002515959558874}
   m_Layer: 0
   m_Name: Medusa
   m_TagString: Medusa
@@ -100,8 +101,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  distanciaLimite: 5
+  distanciaLimite: 8
   distanciaMinima: 1
+  velocidadDesvanecimiento: 0.2
+  opacidadInicial: 1
+  spriteDefault: {fileID: 21300000, guid: a56e40f29da4adc48b5068f4dfb3df3a, type: 3}
+  spriteAlternativo: {fileID: 21300000, guid: 0a79e1ee10df3af4ca5a1d68f70ddfe7, type: 3}
 --- !u!61 &-7585659189771558709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,3 +179,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1628002515959558874
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057645659849714649}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3316e1f07c31d774bbc0b68bd512843d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
