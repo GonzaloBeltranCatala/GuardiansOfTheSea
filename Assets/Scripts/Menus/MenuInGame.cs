@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuInGame : MonoBehaviour
 {
+    public MenuTienda tienda;
     public GameObject pauseMenu;
     public bool isPaused;
 
@@ -43,15 +44,18 @@ public class MenuInGame : MonoBehaviour
     //Funcionalidad menu
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!tienda.isPaused)
         {
-            if (!isPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Pause();
-            }
-            else
-            {
-                Continue();
+                if (!isPaused)
+                {
+                    Pause();
+                }
+                else
+                {
+                    Continue();
+                }
             }
         }
     }
