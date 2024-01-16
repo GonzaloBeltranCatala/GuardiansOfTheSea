@@ -12,7 +12,7 @@ public class Disparo : MonoBehaviour
 
     public TextMeshProUGUI municionText;
 
-    private int municion = 0;
+    public int municion = 0;
 
 
   

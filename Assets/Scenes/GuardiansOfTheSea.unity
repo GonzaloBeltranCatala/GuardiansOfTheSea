@@ -887,6 +887,8 @@ GameObject:
   - component: {fileID: 728430852}
   - component: {fileID: 728430854}
   - component: {fileID: 728430855}
+  - component: {fileID: 728430856}
+  - component: {fileID: 728430857}
   m_Layer: 0
   m_Name: Submarino
   m_TagString: Submarino
@@ -1062,6 +1064,7 @@ MonoBehaviour:
   prefab: {fileID: 4440559383444633052, guid: 6ee84d21cdab0bc4eac09bd581ba74e2, type: 3}
   insPoint: {fileID: 1979980529}
   municionText: {fileID: 1241046156}
+  municion: 0
 --- !u!95 &728430855
 Animator:
   serializedVersion: 5
@@ -1083,6 +1086,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &728430856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728430847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1ed04f8bdfd1340b231cd0e3747511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptDisparo: {fileID: 728430854}
+  scriptCrono: {fileID: 0}
+  puntos: 0
+--- !u!114 &728430857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728430847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78959a23a96f8514aaf9a7914f43a8f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 30
+  cronometro: 0
+  cronometroTxt: {fileID: 1163509405}
 --- !u!1 &786567823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,7 +1263,6 @@ GameObject:
   m_Component:
   - component: {fileID: 832483131}
   - component: {fileID: 832483130}
-  - component: {fileID: 832483132}
   - component: {fileID: 832483134}
   - component: {fileID: 832483135}
   m_Layer: 0
@@ -1268,21 +1300,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &832483132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 832483129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78959a23a96f8514aaf9a7914f43a8f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeLeft: 30
-  cronometro: 0
-  cronometroTxt: {fileID: 1163509405}
 --- !u!114 &832483134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,7 +1597,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
