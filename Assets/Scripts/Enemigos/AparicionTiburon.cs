@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AparicionTiburon : MonoBehaviour
 {
-    public GameObject enemigo;
-    private int numEnemigo = 1;
+    public GameObject tiburon;
+    private int numTiburon = 1;
 
     private void Awake()
     {
@@ -14,12 +14,12 @@ public class AparicionTiburon : MonoBehaviour
 
     public void AparecerEnemigos()
     {
-        if (enemigo != null && !Object.ReferenceEquals(enemigo, null))
+        if (tiburon != null && !Object.ReferenceEquals(tiburon, null))
         {
-            for (int i = 0; i < numEnemigo; i++)
+            for (int i = 0; i < numTiburon; i++)
             {
                 Vector3 posicion = new Vector3(Random.Range(-5, 5), Random.Range(-10, -30), 0);
-                Instantiate(enemigo, posicion, Quaternion.identity);
+                Instantiate(tiburon, posicion, Quaternion.identity);
             }
         }
     }

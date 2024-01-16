@@ -9,6 +9,8 @@ TagManager:
   - Enemigo
   - Enemigo2
   - Bala
+  - Tiburon
+  - Medusa
   layers:
   - Default
   - TransparentFX

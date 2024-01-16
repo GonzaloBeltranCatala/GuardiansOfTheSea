@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8222265528561685173}
   m_Layer: 0
   m_Name: Medusa
-  m_TagString: Enemigo2
+  m_TagString: Medusa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e53a96b0c674cd14aa170b8bc82aa6a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a56e40f29da4adc48b5068f4dfb3df3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  distanciaLimite: 9
+  distanciaLimite: 5
   distanciaMinima: 1
 --- !u!61 &-7585659189771558709
 BoxCollider2D:
@@ -139,7 +139,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 5.12, y: 5.12}
+    newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

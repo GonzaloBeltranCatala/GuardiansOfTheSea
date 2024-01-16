@@ -28,7 +28,7 @@ public class MovimientoBala : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemigo") || collision.CompareTag("Enemigo2"))
+        if (collision.CompareTag("Medusa") || collision.CompareTag("Tiburon"))
         {
             DestruirBala();
         }
