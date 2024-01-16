@@ -11,30 +11,35 @@ public Disparo scriptDisparo;
 //public Cronometro scriptCrono;
 
 public int puntos;
+public bool abrirTienda;
 
 
 
-void Start()
-{
-scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
+    void Start()
+    {
+        scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
+        abrirTienda = false;
 
 //scriptCrono = GameObject.Find("Submarino").GetComponent<Cronometro>();
 
-}
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Barco"))
         {
-        
-            puntos = scriptDisparo.municion;   
+            abrirTienda = true;
 
-            puntos = puntos + 5;
+            puntos = scriptDisparo.municion * 5;
 
             scriptDisparo.municion = 0;
 
+            print("Tu puntuación es: " + puntos);
             //scriptCrono.timeLeft = scriptCrono.timeLeft + puntos;
 
+        } else
+        {
+            abrirTienda = false;
         }
 
     }
