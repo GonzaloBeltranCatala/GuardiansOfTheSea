@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -9073563274887065663}
   - component: {fileID: -8489558783094051839}
   - component: {fileID: -5859787599864849981}
+  - component: {fileID: 7564375252330455555}
   m_Layer: 0
   m_Name: Tiburon
   m_TagString: Tiburon
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &-7342362344223440148
 SpriteRenderer:
@@ -102,6 +103,10 @@ MonoBehaviour:
   objetivo: {fileID: 0}
   velocidad: 2
   distanciaMinima: 1
+  velocidadDesvanecimiento: 0.2
+  opacidadInicial: 1
+  spriteDefault: {fileID: 21300000, guid: f53a5128400c9e543b08652344da5028, type: 3}
+  spriteAlternativo: {fileID: 21300000, guid: 5a68b7eb2871c27439e63063bf1b361b, type: 3}
 --- !u!61 &-8489558783094051839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,3 +179,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &7564375252330455555
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927981264195657496}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d2aadb70d3b6354aa11197d1a68e591, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
