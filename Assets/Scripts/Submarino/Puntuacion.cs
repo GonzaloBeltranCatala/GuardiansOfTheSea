@@ -7,8 +7,7 @@ public class Puntuacion : MonoBehaviour
 {
 
 public Disparo scriptDisparo;
-
-//public Cronometro scriptCrono;
+public GameObject shopHint;
 
 public int puntos;
 public bool abrirTienda;
@@ -19,28 +18,27 @@ public bool abrirTienda;
     {
         scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
         abrirTienda = false;
-
-//scriptCrono = GameObject.Find("Submarino").GetComponent<Cronometro>();
-
+        shopHint.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Barco"))
         {
+            shopHint.SetActive(true);
+
             abrirTienda = true;
 
             puntos = scriptDisparo.municion * 5;
 
             scriptDisparo.municion = 0;
 
-            print("Tu puntuación es: " + puntos);
-            //scriptCrono.timeLeft = scriptCrono.timeLeft + puntos;
-
-        } else
-        {
-            abrirTienda = false;
+            scriptDisparo.municionText.text = "x" + scriptDisparo.municion;
         }
-
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        abrirTienda = false;
+        shopHint.SetActive(false);
     }
 }

@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class MenuTienda : MonoBehaviour
 {
     public GameObject shopMenu;
-    public TextMeshProUGUI shopHint;
     public bool isPaused;
 
     public Cronometro scriptCrono;
@@ -17,7 +15,6 @@ public class MenuTienda : MonoBehaviour
         scriptCrono = GameObject.Find("Submarino").GetComponent<Cronometro>();
         scriptPuntos = GameObject.Find("Submarino").GetComponent<Puntuacion>();
         shopMenu.SetActive(false);
-        shopHint.SetActive(false);
         isPaused = false;
     }
 
@@ -45,9 +42,9 @@ public class MenuTienda : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (scriptPuntos.abrirTienda)
         {
-            if (scriptPuntos.abrirTienda)
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if (!isPaused)
                 {
@@ -58,17 +55,6 @@ public class MenuTienda : MonoBehaviour
                     Continue();
                 }
             }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Barco"))
-        {
-            shopHint.SetActive(true);
-        } else
-        {
-            shopHint.SetActive(false);
         }
     }
 }
