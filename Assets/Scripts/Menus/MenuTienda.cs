@@ -15,7 +15,6 @@ public class MenuTienda : MonoBehaviour
     public AparicionBasura scriptBasura;
     
 
-
     public TextMeshProUGUI puntosText;
 
 
@@ -28,7 +27,6 @@ public class MenuTienda : MonoBehaviour
         scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
         scriptMovimiento = GameObject.Find("Submarino").GetComponent<MovimientoSubmarino>();
         scriptBasura = GameObject.Find("Spawn").GetComponent<AparicionBasura>();
-
 
 
         shopMenu.SetActive(false);
@@ -61,7 +59,10 @@ public class MenuTienda : MonoBehaviour
 
     public void BuyProfundidad()
     {
-        if (scriptMovimiento.profundidad == -19.4f)
+
+         if (puntos >= 10){
+
+            if (scriptMovimiento.profundidad == -19.4f)
         {
             scriptMovimiento.profundidad = -36.3f;
 
@@ -89,11 +90,17 @@ public class MenuTienda : MonoBehaviour
 
             puntosText.text = "Puntos: " + puntos;
 
+            print("maxima capacidad");
+
 
         }else if (scriptMovimiento.profundidad == -60f)
         {
-            print("maxima capacidad");
+            //quitar boton
         }
+
+
+         }
+        
 
         
     }
@@ -104,11 +111,13 @@ public class MenuTienda : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+
                 //recrea la basura
                 scriptBasura.NoBasura();
 
                 scriptBasura.CrearBasura();
 
+            
                  //convierte municion en puntos
                  puntos = puntos + scriptDisparo.municion * 5;
 
@@ -116,7 +125,7 @@ public class MenuTienda : MonoBehaviour
 
                 scriptDisparo.municion = 0;
 
-                scriptDisparo.municionText.text = "x" + scriptDisparo.municion;
+                scriptDisparo.municionText.text = "x " + scriptDisparo.municion;
 
 
                 if (!isPaused)

@@ -24,7 +24,7 @@ public class Disparo : MonoBehaviour
     
     void Update()
     {
-            //jump en el input manager es el space
+            
         if (Input.GetButtonDown("Jump") && municion > 0)
         {
            
@@ -32,7 +32,7 @@ public class Disparo : MonoBehaviour
                 Instantiate(prefab, insPoint.position, Quaternion.identity);
 
             municion--;
-            municionText.text = "x" + municion;
+            municionText.text = "x " + municion;
         }
 
 

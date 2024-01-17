@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class Puntuacion : MonoBehaviour
 {
@@ -11,6 +11,8 @@ public GameObject shopHint;
 
 
 public bool abrirTienda;
+
+ private bool ganar = false;
 
 
 
@@ -25,10 +27,31 @@ public bool abrirTienda;
     {
         if (collision.CompareTag("Barco"))
         {
-            shopHint.SetActive(true);
+            if(ganar == false){
 
-            abrirTienda = true;
+                shopHint.SetActive(true);
+
+                abrirTienda = true;
+            }
+            
+            
+             if(ganar == true){
+
+                    //pantalla "has ganado"
+
+                    print("has ganado");
+
+                    SceneManager.LoadScene("GuardiansOfTheSea");
+
+                }
         }
+
+        if(collision.CompareTag("Submarino2")){
+
+                ganar = true;
+        }
+
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

@@ -26,10 +26,20 @@ public class AparicionTiburon : MonoBehaviour
 
     private void Awake()
     {
+       CrearTiburon();
+    }
+
+
+    public void CrearTiburon(){
+
         for (int i = 0; i < numTiburon; i++)
         {
             Vector3 posicion = new Vector3(Random.Range(-6, 6), Random.Range(-15, -60), 0);
             Instantiate(tiburon, posicion, Quaternion.identity);
         }
+
+
     }
+
+
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class MovimientoSubmarino : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class MovimientoSubmarino : MonoBehaviour
     public float profundidad;
     public MenuTienda scriptPuntos;
 
+  
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -20,7 +24,7 @@ public class MovimientoSubmarino : MonoBehaviour
 
     void Update()
     {
-
+        //movimiento del submarino
         if (congelado==false)
         {
             animator.Play("SubmarinoIdle");
@@ -38,6 +42,7 @@ public class MovimientoSubmarino : MonoBehaviour
 
             transform.position = new Vector3(Mathf.Clamp(transform.position.x + movementVector.x, -9, 9), Mathf.Clamp(transform.position.y + movementVector.y, profundidad, 0), 0);
 
+           
 
             if (Input.GetAxisRaw("Horizontal") > 0)
             {
@@ -60,6 +65,7 @@ public class MovimientoSubmarino : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // colision con los enemigos
         if (collision.CompareTag("Tiburon") || (collision.CompareTag("Medusa")) || (collision.CompareTag("Estrella")))
         {
             StartCoroutine(Congelar());
@@ -76,6 +82,8 @@ public class MovimientoSubmarino : MonoBehaviour
                 scriptPuntos.puntosText.text = "Puntos: " + scriptPuntos.puntos;
             }
         }
+
+
     }
 
 

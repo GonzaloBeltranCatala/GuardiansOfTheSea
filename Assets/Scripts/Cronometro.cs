@@ -39,6 +39,9 @@ public class Cronometro : MonoBehaviour
 
             cronometro = false;
 
+            //pantalla "has perdido"
+            print("has perdido");
+
             SceneManager.LoadScene("GuardiansOfTheSea");
 
             }
