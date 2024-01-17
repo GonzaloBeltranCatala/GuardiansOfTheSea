@@ -1048,8 +1048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb5f585aee04ca45b6cc0011b23b18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tienda: {fileID: 391786795}
   pauseMenu: {fileID: 1789376151}
+  scriptPuntos: {fileID: 0}
   isPaused: 0
 --- !u!114 &391786795
 MonoBehaviour:

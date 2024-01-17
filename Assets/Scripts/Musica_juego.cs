@@ -22,14 +22,12 @@ public class Musica_juego : MonoBehaviour
             if (!pausar)
             {
                 mixer.SetFloat("LowPass", 500);
-                Time.timeScale = 0;
                 pausar = true;
             }
 
             else
             {
                 mixer.SetFloat("LowPass", 22000);
-                Time.timeScale = 1;
                 pausar = false;
             }
 
