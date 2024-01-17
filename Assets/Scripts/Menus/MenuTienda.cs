@@ -11,6 +11,7 @@ public class MenuTienda : MonoBehaviour
     public Cronometro scriptCrono;
     public Puntuacion scriptPuntos;
     public Disparo scriptDisparo;
+    public MovimientoSubmarino scriptMovimiento;
 
 
     public TextMeshProUGUI puntosText;
@@ -23,6 +24,7 @@ public class MenuTienda : MonoBehaviour
         scriptCrono = GameObject.Find("Submarino").GetComponent<Cronometro>();
         scriptPuntos = GameObject.Find("Submarino").GetComponent<Puntuacion>();
         scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
+        scriptMovimiento = GameObject.Find("Submarino").GetComponent<MovimientoSubmarino>();
 
         shopMenu.SetActive(false);
         isPaused = false;
@@ -52,13 +54,52 @@ public class MenuTienda : MonoBehaviour
         }
     }
 
+    public void BuyProfundidad()
+    {
+        if (scriptMovimiento.profundidad == -19.4f)
+        {
+            scriptMovimiento.profundidad = -36.3f;
+
+            puntos = puntos - 10;
+
+            puntosText.text = "Puntos: " + puntos;
+
+        }
+
+        else if (scriptMovimiento.profundidad == -36.3f)
+        {
+            scriptMovimiento.profundidad = -53f;
+
+            puntos = puntos - 10;
+
+            puntosText.text = "Puntos: " + puntos;
+
+
+        }
+        else if (scriptMovimiento.profundidad == -53f)
+        {
+            scriptMovimiento.profundidad = -60f;
+
+            puntos = puntos - 10;
+
+            puntosText.text = "Puntos: " + puntos;
+
+
+        }else if (scriptMovimiento.profundidad == -60f)
+        {
+            print("maxima capacidad");
+        }
+
+        
+    }
+
     void Update()
     {
         if (scriptPuntos.abrirTienda)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-
+                //convierte municion en puntos
                 puntos = puntos + scriptDisparo.municion * 5;
 
                 puntosText.text = "Puntos: " + puntos;
@@ -66,6 +107,7 @@ public class MenuTienda : MonoBehaviour
                 scriptDisparo.municion = 0;
 
                 scriptDisparo.municionText.text = "x" + scriptDisparo.municion;
+
 
                 if (!isPaused)
                 {
