@@ -988,7 +988,8 @@ MonoBehaviour:
   scriptCrono: {fileID: 728430857}
   scriptPuntos: {fileID: 728430856}
   scriptDisparo: {fileID: 728430854}
-  scriptMovimiento: {fileID: 0}
+  scriptMovimiento: {fileID: 728430848}
+  scriptBasura: {fileID: 832483130}
   puntosText: {fileID: 2110575454}
   puntos: 0
 --- !u!1 &504409465

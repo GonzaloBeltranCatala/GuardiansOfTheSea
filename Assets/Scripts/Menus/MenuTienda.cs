@@ -12,6 +12,8 @@ public class MenuTienda : MonoBehaviour
     public Puntuacion scriptPuntos;
     public Disparo scriptDisparo;
     public MovimientoSubmarino scriptMovimiento;
+    public AparicionBasura scriptBasura;
+    
 
 
     public TextMeshProUGUI puntosText;
@@ -25,6 +27,9 @@ public class MenuTienda : MonoBehaviour
         scriptPuntos = GameObject.Find("Submarino").GetComponent<Puntuacion>();
         scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
         scriptMovimiento = GameObject.Find("Submarino").GetComponent<MovimientoSubmarino>();
+        scriptBasura = GameObject.Find("Spawn").GetComponent<AparicionBasura>();
+
+
 
         shopMenu.SetActive(false);
         isPaused = false;
@@ -99,8 +104,13 @@ public class MenuTienda : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                //convierte municion en puntos
-                puntos = puntos + scriptDisparo.municion * 5;
+                //recrea la basura
+                scriptBasura.NoBasura();
+
+                scriptBasura.CrearBasura();
+
+                 //convierte municion en puntos
+                 puntos = puntos + scriptDisparo.municion * 5;
 
                 puntosText.text = "Puntos: " + puntos;
 
