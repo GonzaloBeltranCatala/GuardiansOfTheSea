@@ -27,9 +27,11 @@ public class MovimientoTiburon : MonoBehaviour
         {
             Vector3 dir = objetivo.position - transform.position;
             dir.Normalize();
+
             transform.position += dir * velocidad * Time.deltaTime;
 
             spriteRenderer.flipX = (dir.x > 0);
+
         }
         else
         {
@@ -51,8 +53,6 @@ public class MovimientoTiburon : MonoBehaviour
     // Funcion para cuando el tiburon se choca con el submarino
     void DestruirTiburon()
     {
-        AparicionTiburon aparicionEnemigo = FindObjectOfType<AparicionTiburon>();
-        if (aparicionEnemigo != null) aparicionEnemigo.AparecerEnemigos();
         Destroy(gameObject);
     }
 

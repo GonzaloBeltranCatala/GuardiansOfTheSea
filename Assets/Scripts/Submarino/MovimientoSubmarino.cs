@@ -32,7 +32,7 @@ public class MovimientoSubmarino : MonoBehaviour
 
         Vector3 movementVector = inputVector * velocidad * Time.deltaTime;
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x + movementVector.x, -8, 8), Mathf.Clamp(transform.position.y + movementVector.y, -60, 0), 0);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x + movementVector.x, -9, 9), Mathf.Clamp(transform.position.y + movementVector.y, -60, 0), 0);
 
 
         if (Input.GetAxisRaw("Horizontal") > 0)
