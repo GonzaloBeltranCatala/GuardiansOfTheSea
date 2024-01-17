@@ -5,17 +5,11 @@ using UnityEngine;
 public class MovimientoSubmarino : MonoBehaviour
 {
     public float velocidad;
-
     private SpriteRenderer spriteRenderer;
-
     private Animator animator;
-
     private bool congelado = false;
-
     public float profundidad;
-
     public MenuTienda scriptPuntos;
-
 
     private void Awake()
     {
@@ -62,11 +56,8 @@ public class MovimientoSubmarino : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Tiburon") || (collision.CompareTag("Medusa")))
+        if (collision.CompareTag("Tiburon") || (collision.CompareTag("Medusa")) || (collision.CompareTag("Estrella")))
         {
-            animator.Play("Herido");
-
-
 
             StartCoroutine(Congelar());
 
@@ -81,8 +72,10 @@ public class MovimientoSubmarino : MonoBehaviour
 
                 scriptPuntos.puntosText.text = "Puntos: " + scriptPuntos.puntos;
             }
-           
-
+        }
+        else
+        {
+            animator.Play("SubmarinoIdle");
         }
     }
 
@@ -91,6 +84,7 @@ public class MovimientoSubmarino : MonoBehaviour
     {
 
         congelado = true;
+        animator.Play("Herido");
 
         yield return new WaitForSeconds(5);
 
