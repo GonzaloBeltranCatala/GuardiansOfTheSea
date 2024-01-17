@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuInGame : MonoBehaviour
 {
-    public MenuTienda tienda;
     public GameObject pauseMenu;
+    public Puntuacion scriptPuntos;
     public bool isPaused;
 
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
+        scriptPuntos = GameObject.Find("Submarino").GetComponent<Puntuacion>();
         pauseMenu.SetActive(false);
         isPaused = false;
     }
@@ -44,7 +45,7 @@ public class MenuInGame : MonoBehaviour
     //Funcionalidad menu
     private void Update()
     {
-        if (!tienda.isPaused)
+        if (!scriptPuntos.abrirTienda)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
