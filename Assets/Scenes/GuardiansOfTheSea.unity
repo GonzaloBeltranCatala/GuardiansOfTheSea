@@ -1674,6 +1674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
+  profundidad: -60
+  scriptPuntos: {fileID: 391786795}
 --- !u!212 &728430849
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1813,7 +1815,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!114 &728430854
 MonoBehaviour:
   m_ObjectHideFlags: 0
