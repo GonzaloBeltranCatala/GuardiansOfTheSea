@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovimientoMedusa : MonoBehaviour
 {
-    public float velocidad = 5f, distanciaLimite = 5f, distanciaMinima = 1f, velocidadDesvanecimiento = 0.2f, opacidadInicial = 1f;
+    public float velocidad = 5f, distanciaLimite = 6f, distanciaMinima = 1f, velocidadDesvanecimiento = 0.2f, opacidadInicial = 1f;
     private Vector3 direccion = Vector3.left;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -49,8 +49,6 @@ public class MovimientoMedusa : MonoBehaviour
     // Funcion para cuando la medusa se choca con el submarino
     void DestruirMedusa()
     {
-        AparicionMedusa aparicionEnemigo = FindObjectOfType<AparicionMedusa>();
-        aparicionEnemigo?.AparecerEnemigos();
         Destroy(gameObject);
     }
 
