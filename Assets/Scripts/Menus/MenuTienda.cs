@@ -53,6 +53,7 @@ public class MenuTienda : MonoBehaviour
                 else
                 {
                     Continue();
+                    print("Hola?");
                 }
             }
         }
