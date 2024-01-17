@@ -36,6 +36,7 @@ public class MenuInGame : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
         isPaused = false;
+        Time.timeScale = 1f;
     }
     public void Exit()
     {
