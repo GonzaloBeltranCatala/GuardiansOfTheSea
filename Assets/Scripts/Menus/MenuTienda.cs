@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MenuTienda : MonoBehaviour
 {
@@ -9,11 +10,20 @@ public class MenuTienda : MonoBehaviour
 
     public Cronometro scriptCrono;
     public Puntuacion scriptPuntos;
+    public Disparo scriptDisparo;
+
+
+    public TextMeshProUGUI puntosText;
+
+
+    public int puntos;
 
     void Start()
     {
         scriptCrono = GameObject.Find("Submarino").GetComponent<Cronometro>();
         scriptPuntos = GameObject.Find("Submarino").GetComponent<Puntuacion>();
+        scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
+
         shopMenu.SetActive(false);
         isPaused = false;
     }
@@ -33,10 +43,12 @@ public class MenuTienda : MonoBehaviour
 
     public void BuyOxygen()
     {
-        if (scriptPuntos.puntos >= 10)
+        if (puntos >= 10)
         {
             scriptCrono.timeLeft = scriptCrono.timeLeft + 10;
-            scriptPuntos.puntos = scriptPuntos.puntos - 10;
+            puntos = puntos - 10;
+
+            puntosText.text = "Puntos: " + puntos;
         }
     }
 
@@ -46,6 +58,15 @@ public class MenuTienda : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+
+                puntos = puntos + scriptDisparo.municion * 5;
+
+                puntosText.text = "Puntos: " + puntos;
+
+                scriptDisparo.municion = 0;
+
+                scriptDisparo.municionText.text = "x" + scriptDisparo.municion;
+
                 if (!isPaused)
                 {
                     Pause();
@@ -53,7 +74,7 @@ public class MenuTienda : MonoBehaviour
                 else
                 {
                     Continue();
-                    print("Hola?");
+                   
                 }
             }
         }

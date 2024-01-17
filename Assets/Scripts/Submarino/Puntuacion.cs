@@ -6,17 +6,17 @@ using UnityEngine;
 public class Puntuacion : MonoBehaviour
 {
 
-public Disparo scriptDisparo;
+//public Disparo scriptDisparo;
 public GameObject shopHint;
 
-public int puntos;
+//public int puntos;
 public bool abrirTienda;
 
 
 
     void Start()
     {
-        scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
+        //scriptDisparo = GameObject.Find("Submarino").GetComponent<Disparo>();
         abrirTienda = false;
         shopHint.SetActive(false);
     }
@@ -29,11 +29,11 @@ public bool abrirTienda;
 
             abrirTienda = true;
 
-            puntos = scriptDisparo.municion * 5;
+            //puntos = scriptDisparo.municion * 5;
 
-            scriptDisparo.municion = 0;
+            //scriptDisparo.municion = 0;
 
-            scriptDisparo.municionText.text = "x" + scriptDisparo.municion;
+            //scriptDisparo.municionText.text = "x" + scriptDisparo.municion;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
