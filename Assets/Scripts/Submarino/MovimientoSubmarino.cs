@@ -13,6 +13,7 @@ public class MovimientoSubmarino : MonoBehaviour
     public float profundidad;
     public MenuTienda scriptPuntos;
 
+    public TextMeshProUGUI profText;
   
 
     private void Awake()
@@ -42,7 +43,8 @@ public class MovimientoSubmarino : MonoBehaviour
 
             transform.position = new Vector3(Mathf.Clamp(transform.position.x + movementVector.x, -9, 9), Mathf.Clamp(transform.position.y + movementVector.y, profundidad, 0), 0);
 
-           
+            //medidor de profundidad
+            profText.text = transform.position.y.ToString("F0") +" / "+profundidad.ToString("F0");
 
             if (Input.GetAxisRaw("Horizontal") > 0)
             {
