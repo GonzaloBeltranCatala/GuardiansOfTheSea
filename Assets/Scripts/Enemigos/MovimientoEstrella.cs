@@ -61,7 +61,10 @@ public class MovimientoEstrella : MonoBehaviour
     // Funcion para cuando la estrella se choca con el submarino
     void DestruirEstrella()
     {
-        Destroy(gameObject);
+        estaDesvaneciendose = true;
+        velocidad *= 1f;
+        estrellaCollider.enabled = false;
+        //Destroy(gameObject);
     }
 
     // Funcion para cuando golpeas a la estrella con una bala

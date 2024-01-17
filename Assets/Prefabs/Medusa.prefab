@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  distanciaLimite: 8
+  distanciaLimite: 7
   distanciaMinima: 1
-  velocidadDesvanecimiento: 0.5
+  velocidadDesvanecimiento: 1
   opacidadInicial: 1
   spriteDefault: {fileID: 21300000, guid: a56e40f29da4adc48b5068f4dfb3df3a, type: 3}
   spriteAlternativo: {fileID: 21300000, guid: 0a79e1ee10df3af4ca5a1d68f70ddfe7, type: 3}

@@ -49,7 +49,10 @@ public class MovimientoMedusa : MonoBehaviour
     // Funcion para cuando la medusa se choca con el submarino
     void DestruirMedusa()
     {
-        Destroy(gameObject);
+        estaDesvaneciendose = true;
+        velocidad *= 1f;
+        medusaCollider.enabled = false;
+        //Destroy(gameObject);
     }
 
     // Funcion para cuando golpeas a la medusa con una bala

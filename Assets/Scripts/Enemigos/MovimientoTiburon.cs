@@ -53,7 +53,10 @@ public class MovimientoTiburon : MonoBehaviour
     // Funcion para cuando el tiburon se choca con el submarino
     void DestruirTiburon()
     {
-        Destroy(gameObject);
+        estaDesvaneciendose = true;
+        velocidad *= 0.5f;
+        tiburonCollider.enabled = false;
+        //Destroy(gameObject);
     }
 
     // Funcion para cuando golpeas al tiburon con una bala

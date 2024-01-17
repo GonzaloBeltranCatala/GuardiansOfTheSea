@@ -23,6 +23,7 @@ public class MovimientoSubmarino : MonoBehaviour
 
         if (congelado==false)
         {
+            animator.Play("SubmarinoIdle");
             Vector3 inputVector = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
 
 
@@ -50,7 +51,10 @@ public class MovimientoSubmarino : MonoBehaviour
 
 
         }
- 
+        else
+        {
+            animator.Play("Herido");
+        }
 
     }
 
@@ -58,7 +62,6 @@ public class MovimientoSubmarino : MonoBehaviour
     {
         if (collision.CompareTag("Tiburon") || (collision.CompareTag("Medusa")) || (collision.CompareTag("Estrella")))
         {
-
             StartCoroutine(Congelar());
 
             if (scriptPuntos.puntos > 0)
@@ -73,22 +76,15 @@ public class MovimientoSubmarino : MonoBehaviour
                 scriptPuntos.puntosText.text = "Puntos: " + scriptPuntos.puntos;
             }
         }
-        else
-        {
-            animator.Play("SubmarinoIdle");
-        }
     }
 
 
     private IEnumerator Congelar()
     {
-
         congelado = true;
-        animator.Play("Herido");
 
         yield return new WaitForSeconds(5);
 
         congelado = false;
-
     }
 }
