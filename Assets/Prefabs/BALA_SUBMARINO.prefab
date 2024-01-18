@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3094059065849808554}
   - component: {fileID: 3139027509529084356}
   - component: {fileID: 626342948099411590}
-  - component: {fileID: 1849039259152993651}
   m_Layer: 0
   m_Name: BALA_SUBMARINO
   m_TagString: Bala
@@ -242,11 +241,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!81 &1849039259152993651
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4440559383444633052}
-  m_Enabled: 1

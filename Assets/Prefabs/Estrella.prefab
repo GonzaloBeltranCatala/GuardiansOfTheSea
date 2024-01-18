@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8222265528561685173}
   - component: {fileID: 1628002515959558874}
   - component: {fileID: -5694637983165135595}
-  - component: {fileID: 4690613001921139510}
   m_Layer: 0
   m_Name: Estrella
   m_TagString: Estrella
@@ -299,11 +298,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!81 &4690613001921139510
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9057645659849714649}
-  m_Enabled: 1

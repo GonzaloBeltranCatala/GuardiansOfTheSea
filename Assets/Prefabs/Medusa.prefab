@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8222265528561685173}
   - component: {fileID: 1628002515959558874}
   - component: {fileID: -3911004761957175139}
-  - component: {fileID: 3055780850049977803}
   m_Layer: 0
   m_Name: Medusa
   m_TagString: Medusa
@@ -298,11 +297,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!81 &3055780850049977803
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9057645659849714649}
-  m_Enabled: 1
