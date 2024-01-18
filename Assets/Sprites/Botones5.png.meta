@@ -113,8 +113,8 @@ TextureImporter:
       name: Botones5_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 18
+        x: 52
+        y: 738
         width: 351
         height: 291
       alignment: 0
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a313065f7602e4f4ea8c3356ce68d199
-      internalID: 1224570847
+      spriteID: fc8414cb7385c4145bf7cff09b967638
+      internalID: -87274012
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,8 @@ TextureImporter:
       name: Botones5_1
       rect:
         serializedVersion: 2
-        x: 450
-        y: 18
+        x: 484
+        y: 738
         width: 351
         height: 291
       alignment: 0
@@ -145,8 +145,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f14a22a501c2bb47a0c2cfd19f48f7f
-      internalID: 1399278154
+      spriteID: c7c5f47972ae49a4baa16ac4cb04d138
+      internalID: 1416003272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Botones5_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 380
+        width: 351
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2e55e2bf5f286459786c3bdaf5b145
+      internalID: 1935817650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Botones5_3
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 380
+        width: 351
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ea5aea513482c429e3309ed0f38aea
+      internalID: 1688420128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Botones5_4
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 22
+        width: 351
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a145a7cbf672a40bd8ccaccd4f6316
+      internalID: 135149022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Botones5_5
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 22
+        width: 351
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1fc85e73931f5747833960e1144b3f6
+      internalID: -1168773805
       vertices: []
       indices: 
       edges: []
@@ -162,8 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Botones5_0: 1224570847
-      Botones5_1: 1399278154
+      Botones5_0: -87274012
+      Botones5_1: 1416003272
+      Botones5_2: 1935817650
+      Botones5_3: 1688420128
+      Botones5_4: 135149022
+      Botones5_5: -1168773805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
