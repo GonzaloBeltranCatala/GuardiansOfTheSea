@@ -2186,7 +2186,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: NaN, y: NaN, z: NaN, w: NaN}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2739,7 +2739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLeft: 30
-  scriptDerrota: {fileID: 0}
+  scriptDerrota: {fileID: 391786796}
   cronometro: 0
   cronometroTxt: {fileID: 1163509405}
 --- !u!82 &728430859

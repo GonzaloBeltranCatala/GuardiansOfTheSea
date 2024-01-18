@@ -59,7 +59,6 @@ public class MenuInGame : MonoBehaviour
                         if (!isPaused)
                         {
                             Pause();
-                            print("Otra vez no");
                         }
                         else
                         {
