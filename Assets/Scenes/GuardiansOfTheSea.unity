@@ -627,7 +627,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &186260526
 RectTransform:
@@ -694,7 +694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3488849}
   m_AnchorMax: {x: 0, y: 0.3488849}
-  m_AnchoredPosition: {x: 402.1, y: 0.5}
+  m_AnchoredPosition: {x: 402, y: 0.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256615633
@@ -1024,7 +1024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopMenu: {fileID: 186260522}
-  isPaused: 0
+  isOpen: 0
+  scriptMenuInGame: {fileID: 391786794}
   scriptCrono: {fileID: 728430857}
   scriptPuntos: {fileID: 728430856}
   scriptDisparo: {fileID: 728430854}
@@ -1183,7 +1184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 486.50806, y: 0}
+  m_AnchoredPosition: {x: 486.5, y: 0}
   m_SizeDelta: {x: 373.0161, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &546432768
@@ -1563,7 +1564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.43556112}
   m_AnchorMax: {x: 0, y: 0.43556112}
-  m_AnchoredPosition: {x: 402.1, y: 2.0000153}
+  m_AnchoredPosition: {x: 402, y: 2}
   m_SizeDelta: {x: 160, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593903140
@@ -3259,7 +3260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.6911079}
   m_AnchorMax: {x: 0, y: 0.6911079}
-  m_AnchoredPosition: {x: 400, y: 0.5999985}
+  m_AnchoredPosition: {x: 400, y: 0.625}
   m_SizeDelta: {x: 128.7898, y: 32.6786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004785365
@@ -3503,7 +3504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.51111513}
   m_AnchorMax: {x: 0, y: 0.51111513}
-  m_AnchoredPosition: {x: 214.54013, y: -2}
+  m_AnchoredPosition: {x: 214.5, y: -2}
   m_SizeDelta: {x: 123.09, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1158729835
@@ -4020,7 +4021,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3576619}
   m_AnchorMax: {x: 0, y: 0.3576619}
-  m_AnchoredPosition: {x: 214.54013, y: 2.800003}
+  m_AnchoredPosition: {x: 214.5, y: 2.8125}
   m_SizeDelta: {x: 123.09, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1247587101
@@ -4896,7 +4897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3576619}
   m_AnchorMax: {x: 0, y: 0.3576619}
-  m_AnchoredPosition: {x: 519.6304, y: 2.800003}
+  m_AnchoredPosition: {x: 519.5, y: 2.8125}
   m_SizeDelta: {x: 439.2607, y: 47.7068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471447571
@@ -5168,7 +5169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.51556116}
   m_AnchorMax: {x: 0, y: 0.51556116}
-  m_AnchoredPosition: {x: 402.1, y: -0.5}
+  m_AnchoredPosition: {x: 402, y: -0.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478669841
@@ -6128,7 +6129,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1789376155
 RectTransform:
@@ -6190,7 +6191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.69111514}
   m_AnchorMax: {x: 0, y: 0.69111514}
-  m_AnchoredPosition: {x: 399.99997, y: 0.69999695}
+  m_AnchoredPosition: {x: 400, y: 0.6875}
   m_SizeDelta: {x: 108.130005, y: 33.2964}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1793230487
@@ -7991,7 +7992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.58222306}
   m_AnchorMax: {x: 0, y: 0.58222306}
-  m_AnchoredPosition: {x: 214.5, y: 1.1599998}
+  m_AnchoredPosition: {x: 214.5, y: 1.15625}
   m_SizeDelta: {x: 110.483, y: 26.3208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137575672

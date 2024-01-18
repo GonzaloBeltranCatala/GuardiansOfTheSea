@@ -6,8 +6,9 @@ using TMPro;
 public class MenuTienda : MonoBehaviour
 {
     public GameObject shopMenu;
-    public bool isPaused;
+    public bool isOpen;
 
+    public MenuInGame scriptMenuInGame;
     public Cronometro scriptCrono;
     public Puntuacion scriptPuntos;
     public Disparo scriptDisparo;
@@ -36,20 +37,20 @@ public class MenuTienda : MonoBehaviour
 
 
         shopMenu.SetActive(false);
-        isPaused = false;
+        isOpen = false;
     }
 
     public void Pause()
     {
         shopMenu.SetActive(true);
         Time.timeScale = 0f;
-        isPaused = true;
+        isOpen = true;
     }
     public void Continue()
     {
         shopMenu.SetActive(false);
         Time.timeScale = 1f;
-        isPaused = false;
+        isOpen = false;
     }
 
     public void BuyOxygen()
@@ -114,37 +115,40 @@ public class MenuTienda : MonoBehaviour
     {
         if (scriptPuntos.abrirTienda)
         {
-            if (!scriptVictoria.isWinner)
+            if (!scriptMenuInGame.isPaused)
             {
-                if (!scriptDerrota.isLoser)
+                if (!scriptVictoria.isWinner)
                 {
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (!scriptDerrota.isLoser)
                     {
-
-                        //recrea la basura
-                        scriptBasura.NoBasura();
-
-                        scriptBasura.CrearBasura();
-
-
-                        //convierte municion en puntos
-                        puntos = puntos + scriptDisparo.municion * 5;
-
-                        puntosText.text = "Puntos: " + puntos;
-
-                        scriptDisparo.municion = 0;
-
-                        scriptDisparo.municionText.text = "x " + scriptDisparo.municion;
-
-
-                        if (!isPaused)
+                        if (Input.GetKeyDown(KeyCode.E))
                         {
-                            Pause();
-                        }
-                        else
-                        {
-                            Continue();
 
+                            //recrea la basura
+                            scriptBasura.NoBasura();
+
+                            scriptBasura.CrearBasura();
+
+
+                            //convierte municion en puntos
+                            puntos = puntos + scriptDisparo.municion * 5;
+
+                            puntosText.text = "Puntos: " + puntos;
+
+                            scriptDisparo.municion = 0;
+
+                            scriptDisparo.municionText.text = "x " + scriptDisparo.municion;
+
+
+                            if (!isOpen)
+                            {
+                                Pause();
+                            }
+                            else
+                            {
+                                Continue();
+
+                            }
                         }
                     }
                 }

@@ -29,7 +29,6 @@ public class MenuInGame : MonoBehaviour
     public void Continue()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
         isPaused = false;
     }
 
@@ -48,22 +47,19 @@ public class MenuInGame : MonoBehaviour
     //Funcionalidad menu
     private void Update()
     {
-        if (!scriptPuntos.abrirTienda)
+        if (!scriptVictoria.isWinner)
         {
-            if (!scriptVictoria.isWinner)
+            if (!scriptDerrota.isLoser)
             {
-                if (!scriptDerrota.isLoser)
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    if (Input.GetKeyDown(KeyCode.Escape))
+                    if (!isPaused)
                     {
-                        if (!isPaused)
-                        {
-                            Pause();
-                        }
-                        else
-                        {
-                            Continue();
-                        }
+                        Pause();
+                    }
+                    else
+                    {
+                        Continue();
                     }
                 }
             }
