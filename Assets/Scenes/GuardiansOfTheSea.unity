@@ -1424,8 +1424,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 791b9dc63265a8e4193003bbd3ab258f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scriptPuntuacion: {fileID: 728430856}
   victoryMenu: {fileID: 563045418}
   isWinner: 0
+  animalesSalvados: {fileID: 559768800}
 --- !u!1001 &452080614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1918,10 +1920,10 @@ RectTransform:
   m_Father: {fileID: 563045422}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.9, y: 36.89}
-  m_SizeDelta: {x: 44.1144, y: 73.7792}
+  m_AnchorMin: {x: 0, y: 0.57541424}
+  m_AnchorMax: {x: 0, y: 0.57541424}
+  m_AnchoredPosition: {x: 650.8373, y: -2.1100006}
+  m_SizeDelta: {x: 119.2122, y: 73.7792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &559768800
 MonoBehaviour:
@@ -8483,10 +8485,10 @@ RectTransform:
   m_Father: {fileID: 563045422}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 84.8, y: 52.4}
-  m_SizeDelta: {x: 197.3, y: 22.3137}
+  m_AnchorMin: {x: 0, y: 0.56}
+  m_AnchorMax: {x: 0, y: 0.56}
+  m_AnchoredPosition: {x: 546.8, y: -0.84581757}
+  m_SizeDelta: {x: 197.29999, y: 66.8053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2053847118
 MonoBehaviour:

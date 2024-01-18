@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuVictoria : MonoBehaviour
 {
+    public Puntuacion scriptPuntuacion;
     public GameObject victoryMenu;
     public bool isWinner;
+    public TextMeshProUGUI animalesSalvados;
 
     void Start()
     {
@@ -17,6 +20,7 @@ public class MenuVictoria : MonoBehaviour
     public void Victoria()
     {
         Time.timeScale = 0f;
+        animalesSalvados.text = "" + scriptPuntuacion.monstruosSalvados;
         victoryMenu.SetActive(true);
     }
 
