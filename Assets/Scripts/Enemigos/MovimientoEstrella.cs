@@ -18,6 +18,8 @@ public class MovimientoEstrella : MonoBehaviour
 
     private AudioSource estrellaSound;
 
+    public Puntuacion contadorMonstruos;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -72,6 +74,7 @@ public class MovimientoEstrella : MonoBehaviour
     // Funcion para cuando golpeas a la estrella con una bala
     void ApaciguarEstrella()
     {
+        contadorMonstruos.monstruosSalvados++;
         CambiarSprite(spriteAlternativo);
         estaDesvaneciendose = true;
         velocidad *= 0.5f;

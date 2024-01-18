@@ -15,6 +15,8 @@ public class MovimientoMedusa : MonoBehaviour
 
     private AudioSource medusaSound;
 
+    public Puntuacion contadorMonstruos;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -61,6 +63,7 @@ public class MovimientoMedusa : MonoBehaviour
     // Funcion para cuando golpeas a la medusa con una bala
     void ApaciguarMedusa()
     {
+        contadorMonstruos.monstruosSalvados++;
         CambiarSprite(spriteAlternativo);
         estaDesvaneciendose = true;
         velocidad *= 0.5f;

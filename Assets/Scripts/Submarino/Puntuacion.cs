@@ -15,11 +15,12 @@ public class Puntuacion : MonoBehaviour
 
     private bool ganar = false;
 
+    public int monstruosSalvados;
 
 
     void Start()
     {
-      
+        monstruosSalvados = 0;
         abrirTienda = false;
         shopHint.SetActive(false);
     }

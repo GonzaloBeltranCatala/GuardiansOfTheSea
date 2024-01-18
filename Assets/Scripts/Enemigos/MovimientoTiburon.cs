@@ -14,6 +14,8 @@ public class MovimientoTiburon : MonoBehaviour
     private Collider2D tiburonCollider;
     private AudioSource tiburonSound;
 
+    public Puntuacion contadorMonstruos;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -64,6 +66,7 @@ public class MovimientoTiburon : MonoBehaviour
     // Funcion para cuando golpeas al tiburon con una bala
     void ApaciguarTiburon()
     {
+        contadorMonstruos.monstruosSalvados++;
         CambiarSprite(spriteAlternativo);
         estaDesvaneciendose = true;
         velocidad *= 0.5f;
