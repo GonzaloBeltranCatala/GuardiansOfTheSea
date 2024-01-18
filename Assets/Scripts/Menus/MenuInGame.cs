@@ -9,6 +9,7 @@ public class MenuInGame : MonoBehaviour
     public Puntuacion scriptPuntos;
     public MenuVictoria scriptVictoria;
     public MenuDerrota scriptDerrota;
+    public MenuTienda scriptTienda;
     public bool isPaused;
 
     void Start()
@@ -29,6 +30,10 @@ public class MenuInGame : MonoBehaviour
     public void Continue()
     {
         pauseMenu.SetActive(false);
+        if (!scriptTienda.isOpen)
+        {
+            Time.timeScale = 1f;
+        }
         isPaused = false;
     }
 

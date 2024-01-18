@@ -1010,6 +1010,7 @@ MonoBehaviour:
   scriptPuntos: {fileID: 0}
   scriptVictoria: {fileID: 391786797}
   scriptDerrota: {fileID: 391786796}
+  scriptTienda: {fileID: 391786795}
   isPaused: 0
 --- !u!114 &391786795
 MonoBehaviour:
