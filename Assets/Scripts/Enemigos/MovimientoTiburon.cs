@@ -12,12 +12,14 @@ public class MovimientoTiburon : MonoBehaviour
     public Sprite spriteDefault, spriteAlternativo;
     private bool estaDesvaneciendose = false;
     private Collider2D tiburonCollider;
+    private AudioSource tiburonSound;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         tiburonCollider = GetComponent<Collider2D>();
+        tiburonSound = GetComponent<AudioSource>();
         CambiarSprite(spriteDefault);
     }
 
@@ -66,6 +68,7 @@ public class MovimientoTiburon : MonoBehaviour
         estaDesvaneciendose = true;
         velocidad *= 0.5f;
         tiburonCollider.enabled = false;
+        tiburonSound.Play();
     }
 
     // Cambia el sprite al tiburon feliz

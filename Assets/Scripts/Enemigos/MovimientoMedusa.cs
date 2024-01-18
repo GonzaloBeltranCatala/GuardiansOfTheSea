@@ -13,11 +13,14 @@ public class MovimientoMedusa : MonoBehaviour
 
     public Sprite spriteDefault, spriteAlternativo;
 
+    private AudioSource medusaSound;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         medusaCollider = GetComponent<Collider2D>();
+        medusaSound = GetComponent<AudioSource>();
         CambiarSprite(spriteDefault);
     }
 
@@ -62,6 +65,7 @@ public class MovimientoMedusa : MonoBehaviour
         estaDesvaneciendose = true;
         velocidad *= 0.5f;
         medusaCollider.enabled = false;
+        medusaSound.Play();
     }
 
     // Cambia el sprite a la medusa feliz

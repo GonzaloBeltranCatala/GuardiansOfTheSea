@@ -16,6 +16,7 @@ public class MovimientoEstrella : MonoBehaviour
     private float angulo = 0f;
     private Vector3 centro;
 
+    private AudioSource estrellaSound;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class MovimientoEstrella : MonoBehaviour
         animator = GetComponent<Animator>();
         estrellaCollider = GetComponent<Collider2D>();
         centro = transform.position;
+        estrellaSound = GetComponent<AudioSource>();
         CambiarSprite(spriteDefault);
     }
 
@@ -74,6 +76,7 @@ public class MovimientoEstrella : MonoBehaviour
         estaDesvaneciendose = true;
         velocidad *= 0.5f;
         estrellaCollider.enabled = false;
+        estrellaSound.Play();
     }
 
     // Cambia el sprite a la estrella feliz

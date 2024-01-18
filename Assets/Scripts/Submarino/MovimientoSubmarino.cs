@@ -12,6 +12,8 @@ public class MovimientoSubmarino : MonoBehaviour
     private bool congelado = false;
     public float profundidad;
     public MenuTienda scriptPuntos;
+    private AudioSource choqueSound;
+
 
     public TextMeshProUGUI profText;
   
@@ -20,6 +22,7 @@ public class MovimientoSubmarino : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        choqueSound = GetComponent<AudioSource>();
     }
 
 
@@ -70,6 +73,7 @@ public class MovimientoSubmarino : MonoBehaviour
         // colision con los enemigos
         if (collision.CompareTag("Tiburon") || (collision.CompareTag("Medusa")) || (collision.CompareTag("Estrella")))
         {
+            choqueSound.Play();
             StartCoroutine(Congelar());
 
             if (scriptPuntos.puntos > 0)
