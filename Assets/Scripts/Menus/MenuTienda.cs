@@ -67,13 +67,13 @@ public class MenuTienda : MonoBehaviour
     public void BuyProfundidad()
     {
 
-         if (puntos >= 50){
+         if (puntos >= 60){
 
             if (scriptMovimiento.profundidad == -19.4f)
         {
             scriptMovimiento.profundidad = -36.3f;
 
-            puntos = puntos - 50;
+            puntos = puntos - 60;
 
             puntosText.text = "Puntos: " + puntos;
 
@@ -83,7 +83,7 @@ public class MenuTienda : MonoBehaviour
         {
             scriptMovimiento.profundidad = -53f;
 
-            puntos = puntos - 50;
+            puntos = puntos - 60;
 
             puntosText.text = "Puntos: " + puntos;
 
@@ -93,7 +93,7 @@ public class MenuTienda : MonoBehaviour
         {
             scriptMovimiento.profundidad = -60f;
 
-            puntos = puntos - 50;
+            puntos = puntos - 60;
 
             puntosText.text = "Puntos: " + puntos;
 
