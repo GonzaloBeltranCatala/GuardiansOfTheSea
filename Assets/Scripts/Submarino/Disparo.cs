@@ -13,6 +13,8 @@ public class Disparo : MonoBehaviour
     public TextMeshProUGUI municionText;
 
     public int municion = 0;
+
+    public MenuInGame scriptPausa;
   
     void Start()
     {
@@ -21,6 +23,9 @@ public class Disparo : MonoBehaviour
 
     void Update()
     { 
+
+        if(scriptPausa.isPaused == false){
+
         if (Input.GetButtonDown("Jump") && municion > 0)
         {
                 //que voy a instanciar,donde, no rota
@@ -29,6 +34,9 @@ public class Disparo : MonoBehaviour
             municion--;
             municionText.text = "x " + municion;
         }
+
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

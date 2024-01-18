@@ -2925,6 +2925,7 @@ MonoBehaviour:
   insPoint: {fileID: 1979980529}
   municionText: {fileID: 1241046156}
   municion: 0
+  scriptPausa: {fileID: 391786794}
 --- !u!95 &728430855
 Animator:
   serializedVersion: 5
