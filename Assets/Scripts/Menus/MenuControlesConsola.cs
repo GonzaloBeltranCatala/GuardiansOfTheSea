@@ -3,30 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuPrincipalScript : MonoBehaviour
+public class MenuControlesConsola : MonoBehaviour
 {
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
     }
 
-    public void StartGame()
+    public void BackToMain()
     {
-        SceneManager.LoadScene("GuardiansOfTheSea");
+        SceneManager.LoadScene("Menu");
     }
 
-    public void Options()
-    {
-        SceneManager.LoadScene("Opciones");
-    }
-
-    public void Controls()
+    public void ToPC()
     {
         SceneManager.LoadScene("Controles(PC)");
     }
 
-    public void Exit()
+    void Update()
     {
-        Application.Quit();
+        
     }
 }
