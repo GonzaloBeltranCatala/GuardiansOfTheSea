@@ -7,6 +7,8 @@ public class MenuInGame : MonoBehaviour
 {
     public GameObject pauseMenu;
     public Puntuacion scriptPuntos;
+    public MenuVictoria scriptVictoria;
+    public MenuDerrota scriptDerrota;
     public bool isPaused;
 
     void Start()
@@ -48,15 +50,22 @@ public class MenuInGame : MonoBehaviour
     {
         if (!scriptPuntos.abrirTienda)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (!scriptVictoria.isWinner)
             {
-                if (!isPaused)
+                if (!scriptDerrota.isLoser)
                 {
-                    Pause();
-                }
-                else
-                {
-                    Continue();
+                    if (Input.GetKeyDown(KeyCode.Escape))
+                    {
+                        if (!isPaused)
+                        {
+                            Pause();
+                            print("Otra vez no");
+                        }
+                        else
+                        {
+                            Continue();
+                        }
+                    }
                 }
             }
         }

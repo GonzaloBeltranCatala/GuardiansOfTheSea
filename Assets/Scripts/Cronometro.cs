@@ -10,6 +10,8 @@ public class Cronometro : MonoBehaviour
 
     public float timeLeft;
 
+    public MenuDerrota scriptDerrota;
+
     public bool cronometro = false;
 
     public TextMeshProUGUI cronometroTxt;
@@ -39,10 +41,8 @@ public class Cronometro : MonoBehaviour
 
             cronometro = false;
 
-            //pantalla "has perdido"
-            print("has perdido");
-
-            SceneManager.LoadScene("GuardiansOfTheSea");
+                //pantalla "has perdido"
+                scriptDerrota.Derrota();
 
             }
 

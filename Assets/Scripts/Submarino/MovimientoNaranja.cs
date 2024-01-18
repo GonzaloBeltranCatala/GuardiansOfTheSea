@@ -30,7 +30,6 @@ public class MovimientoNaranja : MonoBehaviour
    if (collision.CompareTag("Submarino"))
         {
             salvar = true;
-
         }
 
  }

@@ -13,7 +13,9 @@ public class MenuTienda : MonoBehaviour
     public Disparo scriptDisparo;
     public MovimientoSubmarino scriptMovimiento;
     public AparicionBasura scriptBasura;
-    
+    public MenuVictoria scriptVictoria;
+    public MenuDerrota scriptDerrota;
+
 
     public TextMeshProUGUI puntosText;
 
@@ -112,33 +114,39 @@ public class MenuTienda : MonoBehaviour
     {
         if (scriptPuntos.abrirTienda)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (!scriptVictoria.isWinner)
             {
-
-                //recrea la basura
-                scriptBasura.NoBasura();
-
-                scriptBasura.CrearBasura();
-
-            
-                 //convierte municion en puntos
-                 puntos = puntos + scriptDisparo.municion * 5;
-
-                puntosText.text = "Puntos: " + puntos;
-
-                scriptDisparo.municion = 0;
-
-                scriptDisparo.municionText.text = "x " + scriptDisparo.municion;
-
-
-                if (!isPaused)
+                if (!scriptDerrota.isLoser)
                 {
-                    Pause();
-                }
-                else
-                {
-                    Continue();
-                   
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+
+                        //recrea la basura
+                        scriptBasura.NoBasura();
+
+                        scriptBasura.CrearBasura();
+
+
+                        //convierte municion en puntos
+                        puntos = puntos + scriptDisparo.municion * 5;
+
+                        puntosText.text = "Puntos: " + puntos;
+
+                        scriptDisparo.municion = 0;
+
+                        scriptDisparo.municionText.text = "x " + scriptDisparo.municion;
+
+
+                        if (!isPaused)
+                        {
+                            Pause();
+                        }
+                        else
+                        {
+                            Continue();
+
+                        }
+                    }
                 }
             }
         }

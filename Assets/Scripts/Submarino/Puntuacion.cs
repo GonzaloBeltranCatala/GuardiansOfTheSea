@@ -7,12 +7,13 @@ public class Puntuacion : MonoBehaviour
 {
 
 
-public GameObject shopHint;
+    public GameObject shopHint;
 
+    public MenuVictoria scriptVictoria;
 
-public bool abrirTienda;
+    public bool abrirTienda;
 
- private bool ganar = false;
+    private bool ganar = false;
 
 
 
@@ -37,13 +38,11 @@ public bool abrirTienda;
             
              if(ganar == true){
 
-                    //pantalla "has ganado"
+                //pantalla "has ganado"
 
-                    print("has ganado");
+                scriptVictoria.Victoria();
 
-                    SceneManager.LoadScene("GuardiansOfTheSea");
-
-                }
+            }
         }
 
         if(collision.CompareTag("Submarino2")){
