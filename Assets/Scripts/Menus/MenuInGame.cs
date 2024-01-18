@@ -56,7 +56,7 @@ public class MenuInGame : MonoBehaviour
         {
             if (!scriptDerrota.isLoser)
             {
-                if (Input.GetKeyDown(KeyCode.Escape))
+                if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton9)) || Input.GetKeyDown(KeyCode.JoystickButton8))
                 {
                     if (!isPaused)
                     {

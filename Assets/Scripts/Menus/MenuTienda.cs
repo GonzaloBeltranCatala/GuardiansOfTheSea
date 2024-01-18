@@ -121,7 +121,7 @@ public class MenuTienda : MonoBehaviour
                 {
                     if (!scriptDerrota.isLoser)
                     {
-                        if (Input.GetKeyDown(KeyCode.E))
+                        if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton0)) || Input.GetKeyDown(KeyCode.JoystickButton3))
                         {
 
                             //recrea la basura

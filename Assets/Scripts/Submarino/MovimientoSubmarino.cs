@@ -97,7 +97,7 @@ public class MovimientoSubmarino : MonoBehaviour
     {
         congelado = true;
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
 
         congelado = false;
     }
