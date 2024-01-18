@@ -5,41 +5,19 @@ using UnityEngine;
 public class AparicionTiburon : MonoBehaviour
 {
     public GameObject tiburon;
-    private int numTiburon = 3;
-
-    /*private void Awake()
-    {
-        AparecerEnemigos();
-    }
-
-    public void AparecerEnemigos()
-    {
-        if (tiburon != null && !Object.ReferenceEquals(tiburon, null))
-        {
-            for (int i = 0; i < numTiburon; i++)
-            {
-                Vector3 posicion = new Vector3(Random.Range(-5, 5), Random.Range(-10, -30), 0);
-                Instantiate(tiburon, posicion, Quaternion.identity);
-            }
-        }
-    }*/
+    private int numTiburones = 4;
 
     private void Awake()
     {
-       CrearTiburon();
+        CrearTiburon();
     }
 
-
-    public void CrearTiburon(){
-
-        for (int i = 0; i < numTiburon; i++)
+    public void CrearTiburon()
+    {
+        for (int i = 0; i < numTiburones; i++)
         {
-            Vector3 posicion = new Vector3(Random.Range(-6, 6), Random.Range(-15, -60), 0);
+            Vector3 posicion = new Vector3(Random.Range(-10, -10), Random.Range(-15, -50), 0);
             Instantiate(tiburon, posicion, Quaternion.identity);
         }
-
-
     }
-
-
 }
