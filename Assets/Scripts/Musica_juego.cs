@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 public class Musica_juego : MonoBehaviour
 {
     private bool pausar;
+    public MenuInGame scriptMenuInGame;
     public AudioMixer mixer;
 
     // Start is called before the first frame update
@@ -17,20 +18,13 @@ public class Musica_juego : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (!scriptMenuInGame.isPaused)
         {
-            if (!pausar)
-            {
-                mixer.SetFloat("LowPass", 500);
-                pausar = true;
-            }
-
-            else
-            {
-                mixer.SetFloat("LowPass", 22000);
-                pausar = false;
-            }
-
+            mixer.SetFloat("LowPass", 22000);
+        }
+        else
+        {
+            mixer.SetFloat("LowPass", 500);
         }
     }
 }
