@@ -17,6 +17,10 @@ public class MenuTienda : MonoBehaviour
 
     public TextMeshProUGUI puntosText;
 
+    public GameObject botonCasco;
+
+    public GameObject capMax;
+
 
     public int puntos;
 
@@ -60,13 +64,13 @@ public class MenuTienda : MonoBehaviour
     public void BuyProfundidad()
     {
 
-         if (puntos >= 10){
+         if (puntos >= 50){
 
             if (scriptMovimiento.profundidad == -19.4f)
         {
             scriptMovimiento.profundidad = -36.3f;
 
-            puntos = puntos - 10;
+            puntos = puntos - 50;
 
             puntosText.text = "Puntos: " + puntos;
 
@@ -76,7 +80,7 @@ public class MenuTienda : MonoBehaviour
         {
             scriptMovimiento.profundidad = -53f;
 
-            puntos = puntos - 10;
+            puntos = puntos - 50;
 
             puntosText.text = "Puntos: " + puntos;
 
@@ -86,18 +90,17 @@ public class MenuTienda : MonoBehaviour
         {
             scriptMovimiento.profundidad = -60f;
 
-            puntos = puntos - 10;
+            puntos = puntos - 50;
 
             puntosText.text = "Puntos: " + puntos;
 
             print("maxima capacidad");
 
+                botonCasco.SetActive(false);
 
-        }else if (scriptMovimiento.profundidad == -60f)
-        {
-            //quitar boton
-        }
-
+                capMax.SetActive(true);
+            }
+        
 
          }
         
